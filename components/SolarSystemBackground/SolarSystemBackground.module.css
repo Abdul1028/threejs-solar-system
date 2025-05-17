@@ -1,0 +1,14 @@
+/* components/SolarSystemBackground/SolarSystemBackground.module.css */
+
+.canvasContainer :global(canvas) {
+  /* This :global(canvas) is important to target the canvas 
+     that @react-three/fiber creates inside this div. */
+  position: fixed; /* Stick to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  z-index: -1;   /* CRUCIAL: This sends it to the very back! */
+  /* Optional: If you DON'T want the background to be clickable, uncomment the next line */
+  /* pointer-events: none; */
+} 
